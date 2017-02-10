@@ -1,0 +1,169 @@
+-var space = ' '
+.prod-card-cont
+	.slider-overal
+		.display
+			img.main-img(src='img/parovarka/01_medium.jpg', width='370', height='278' alt='prod-medium-img')
+			a.magnifier(href='#')
+				img.magnifier-img(src='img/magnifier.png', alt='mag')
+		.color-container
+			#gray.color-button
+			#green.color-button
+			#red.color-button
+			#orange.color-button
+			.triangle
+				img(src="img/tristar.gif", alt="tristar")
+		.slider-content
+			a.back-handler(href='#')
+			.slider-wrap
+				ul.slider
+					li.slide-item.active
+						a.item-link(href='#')
+							img.item-image(src='img/parovarka/01_small.jpg', width='88', height="66", alt='small')
+					li.slide-item
+						a.item-link(href='#')
+							img.item-image(src='img/parovarka/02_small.jpg', width='88', height="66", alt='small')
+					li.slide-item
+						a.item-link(href='#')
+							img.item-image(src='img/parovarka/03_small.jpg', width='88', height="66", alt='small')
+					li.slide-item
+						a.item-link(href='#')
+							img.item-image(src='img/parovarka/04_small.jpg', width='88', height="66", alt='small')
+					li.slide-item
+						a.item-link(href='')
+							img.item-image(src='img/parovarka/05_small.jpg', width='88', height="66", alt='small')
+			a.forward-handler(href='#')
+			.big-image-container
+				a.close(href='#') ×
+				img.big-image(src='', alt='big_prod_img')
+	.prod-card__description
+		.prod-card__inner
+			h1.prod-card__prod-title
+				| Мультиварка высокого
+				| давления MP46FDA
+			h2.prod-card__articul
+				| Артикул: 
+				span.artic-num 18167891365981132
+			h2.prod-card__color
+				| Цвет: 
+				span.color-value Слоновая кость
+			p.prod-card__short-description
+				| Краткоре описание техники... Краткоре описание техники... Краткоре описание техники
+			ul.prod-card__features
+				li.features-item
+					.features-item-inner
+						span.features-name
+							| Обьём плоскости для
+							| приготовления, п
+					span.features-value 5
+				li.features-item
+					.features-item-inner
+						span.features-name Приготовление под давлением
+					span.features-value Да
+				li.features-item
+					.features-item-inner
+						span.features-name Приготовление на пару
+					span.features-value Да
+				li.features-item
+					.features-item-inner
+						span.features-name Управление
+					span.features-value Электронное
+				li.features-item
+					.features-item-inner
+						span.features-name
+							| Количество автоматических
+							| программ
+					span.features-value 11
+				li.features-item
+					.features-item-inner
+						span.features-name Количество уровней защиты
+					span.features-value 11
+				li.features-item
+					.features-item-inner
+						span.features-name Книга рецептов
+					span.features-value Да
+			.prod-card__other-features
+				h2.other-item
+					| В товаре используется технология:#{space}
+					span.other-value SMART
+				h2.other-item
+					| Этот товар на#{space}
+					a.other-value(href="#") Яндекс-маркете
+			.prod-card__social
+				span.share Поделиться
+				.ya-share2(data-services='facebook,vkontakte,gplus,twitter')
+			.prod-card__price
+				span.price-value 136 763 руб.
+				a.buy-button(href='#') Купить
+	
+	.prod-card__big-description
+		header.big-description-header
+			span.big-description-title Описание
+		p.big-description-text
+			| Варить, жарить, запекать, тушить…  А точнее – умеет замечательно и вкусно готовить наша мультиварка высокого давления. Стоять у плиты больше не модно, да и не нужно. Зачем тратить драгоценное время?  Мультиварка высокого давления идеально разберется с обедом без Вас! Ведь она многофункциональна, у нее автоматические режимы приготовления, а  технология SMART проконтролирует и отрегулирует температуру и давление, необходимые Вашим блюдам. Удобные подсказки и понятная индикация помогут справиться даже с самой сложной затеей. Самое главное − мультиварка обеспечивает безопасность использования даже без вашего участия. Цвет слоновой кости или сочные краски – выбор за Вами. А с книгой полезных рецептов, входящей в комплект, никто и не заподозрит, что Вы и не знали раньше такого количества замечательных  блюд.
+		.big-description-docs
+			h2.docs-title Файлы / Документы
+			ul.docs-list
+				li.doc-item
+					a.file-link(href='http://www.infopar.ru/docs/Tefal-3662.pdf' download)
+						span.file-name Инструкция#{space}
+						span.file-size (4mb)
+				li.doc-item
+					a.file-link(href='http://magicpot.ru/files/MPC%201140%20Kniga%20Receptov.pdf' download)
+						span.file-name Книга рецептов#{space}
+						span.file-size (6mb)
+	.prod-card__big-description
+		header.big-description-header
+			span.big-description-title Характеристики
+		ul.prod-card__features.prod-card__features--big
+			li.features-item
+				.features-item-inner
+					span.features-name
+						| Обьём плоскости для
+						| приготовления, п
+				span.features-value 5
+			li.features-item
+				.features-item-inner
+					span.features-name Приготовление под давлением
+				span.features-value Да
+			li.features-item
+				.features-item-inner
+					span.features-name Приготовление на пару
+				span.features-value Да
+			li.features-item
+				.features-item-inner
+					span.features-name Управление
+				span.features-value Электронное
+			li.features-item
+				.features-item-inner
+					span.features-name
+						| Количество автоматических
+						| программ
+				span.features-value 11
+			li.features-item
+				.features-item-inner
+					span.features-name Количество уровней защиты
+				span.features-value 11
+			li.features-item
+				.features-item-inner
+					span.features-name Книга рецептов
+				span.features-value Да
+			li.features-item
+				.features-item-inner
+					span.features-name Звуковой сигнал окончания работы
+				span.features-value Да
+			li.features-item
+				.features-item-inner
+					span.features-name Количество режимов
+				span.features-value 12
+			li.features-item
+				.features-item-inner
+					span.features-name Регулировка уровня давления пара
+				span.features-value Да
+			li.features-item
+				.features-item-inner
+					span.features-name Программирование режимов приготовления
+				span.features-value Да
+			li.features-item
+				.features-item-inner
+					span.features-name Антипригарное покрытие емкости приготовления
+				span.features-value Dyking Coating

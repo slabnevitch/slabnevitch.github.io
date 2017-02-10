@@ -1,0 +1,41 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-adv_icons-01 {
+    width: 87px;
+    height: 71px;
+    background-position: -5px -5px;
+}
+
+.sprite-adv_icons-02 {
+    width: 62px;
+    height: 73px;
+    background-position: -102px -5px;
+}
+
+.sprite-adv_icons-09 {
+    width: 64px;
+    height: 83px;
+    background-position: -5px -88px;
+}
+
+.sprite-adv_icons-12 {
+    width: 86px;
+    height: 71px;
+    background-position: -79px -88px;
+}
+
+.sprite-adv_icons-17 {
+    width: 84px;
+    height: 79px;
+    background-position: -175px -5px;
+}
+
+.sprite-adv_icons-18 {
+    width: 59px;
+    height: 82px;
+    background-position: -175px -94px;
+}

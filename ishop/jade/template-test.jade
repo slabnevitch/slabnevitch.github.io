@@ -1,0 +1,343 @@
+doctype html
+html(lang='en')
+  block sharedVars
+    - var links = [{url: 'index.html', name: 'О магазине', data: 'index'}, {url: 'payment.html', name: 'Оплата', data: 'payment'}, {url: 'delivery.html', name: 'Доставка', data: 'delivery'}, {url: 'help.html', name: 'Поддержка', data: 'help'}, {url: 'news.html', name: 'Новости', data:'news'}, {url: 'contacts.html', name: 'Контакты', data: 'contacts'}];
+  head
+    meta(charset='UTF-8')
+    title Evrotehnika: интернет-магазин в Белоруссии
+    link(rel='stylesheet', href='css/reset.css')
+    link(rel='stylesheet', href='css/style.css')
+    block other-styles
+    script(type='text/javascript', src='js/jquery-3.1.0.min.js')
+    script(src='js/script.js')
+    block other-scripts
+  body
+    header.header
+      .wrapper
+        .header__first-line
+          img.header_logo(src='img/header_logo.png', alt='logo')
+          span.header__slogan
+            | Мы продаём то, 
+            span.slogan-red что купили бы сами
+          img.redcross(src='img/header_cross.gif', alt='крестик')
+          form.header__form(action='#', name='search-form', method='get')
+            input.header__input(type='text', placeholder='Поиск')
+            button.header__search-button(type='submit')
+        .header__shoping-bag
+          img.bag(src='img/bag.png', alt='basket')
+          .bag-text-cont
+            h3.shoping-tittle Корзина
+            div
+              span.bag-item товары
+              span.item-counter 5
+            div
+              span.bag-amount сумма
+              span.amount-counter 30 642 руб.
+        .header__second-line
+          p.schedule
+            | Время работы Пн - ПТ
+            br
+            | 				с 8-00 до 20-00
+          p.days
+            | В выходные дни
+            br
+            | 				с  9-00 до 17-00
+          p.telephones
+            | 8 (495) 510 27 27
+            br
+            | 				8 (800) 100 05 56
+    nav.nav
+      .wrapper
+        ul.nav-menu
+           each item in links
+             if item.data === selected
+               li(class="nav-item nav-item--active")
+                 a(href="#" class="nav-link nav-link--active")= item.name
+             else
+                li.nav-item
+                  a(href=item.url class="nav-link")= item.name
+         
+      .nav__red-line
+    .content
+      .wrapper
+        .breadcrumbs-container
+          ul.breadcrumbs
+            li.breadcrumbs-item
+              a.breadcrumbs-link(href="index.html") Oursson
+            li.breadcrumbs-item →
+            block breadcrumbs-link
+          block current-section-name
+        // breadcrumbs-container
+        .left-sidebar
+          ul.left-sidebar__semantic-dl
+            li
+              a.left-sidebar__header(href='#') Техника
+            li.left-sidebar__semantic-dt
+              ul.left-sidebar__category
+                li.left-sidebar__category-item
+                  | Подготовка и обработка
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Блендеры и миксеры
+              ul.left-sidebar__category
+                li.left-sidebar__category-item
+                  | Приготовление пищи
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Кухонные процессоры
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Грили и ростеры
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Индукционные плиты
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Микроволновые печи
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Мультиварки
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Пароварки
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Тостеры
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Хлебопечи
+              ul.left-sidebar__category
+                li.left-sidebar__category-item
+                  | Приготовление напитков
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Кофеварки
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Соковыжималки
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Электрические чайники
+          ul.left-sidebar__semantic-dl
+            li
+              a.left-sidebar__header(href='#') Посуда для приготовления пищи
+            li.left-sidebar__semantic-dt
+              ul.left-sidebar__category
+                li.left-sidebar__category-item
+                  | Посуда из нержавеющей стали
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Кастрюли
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Сковороды
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Поддоны
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Скороварки
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Чайники
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Скалки
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Сотейники
+              ul.left-sidebar__category
+                li.left-sidebar__category-item
+                  | Посуда из керамики
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Формы для приготовления
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Сковороды
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Кастрюли
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Сотейники
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Наборы посуды
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Ножи
+              ul.left-sidebar__category
+                li.left-sidebar__category-item
+                  | Посуда из стекла
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Посуда для СВЧ
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Наборы кастрюль
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Наборы посуды
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Тарелки
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Комплекты посуды
+              ul.left-sidebar__category
+                li.left-sidebar__category-item
+                  | Чугунная посуда
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Кастрюли
+                  ul.left-sidebar__subcategory
+                    li.left-sidebar__subcategory-item
+                      a.left-sidebar__subcategory-link(href='#') Ковши
+          ul.left-sidebar__semantic-dl
+            li
+              a.left-sidebar__header(href='#')
+                | Посуда для
+                | хранения продуктов
+            li.left-sidebar__semantic-dt
+              ul.left-sidebar__category
+                li.left-sidebar__category-item
+                  a.left-sidebar__category-link(href='#') Емкости
+                li.left-sidebar__category-item
+                  a.left-sidebar__category-link(href='#') Наборы емкостей
+                li.left-sidebar__category-item
+                  a.left-sidebar__category-link(href='#') Контейнеры
+                li.left-sidebar__category-item
+                  a.left-sidebar__category-link(href='#') Наборы контейнеров
+          ul.left-sidebar__semantic-dl
+            li
+              a.left-sidebar__header(href='#') Специальные предложения
+          .details
+            h1.details__tittle Реквизиты
+            p.details__text
+              | г Минск ул. Энтузиастов 84
+              | ИНН 3316007270, кор. счёт 30101810200000000716, Р/с 40703810612260000004
+        // left-sidebar
+        block right-sidebar
+        block center-content
+        hr.content-line
+    // content
+    .slider-actions
+      .wrapper.wrapper--slider
+        h1.slider-actions__tittle Акции
+        .slider-actions__container
+          .slider-actions__wrapper
+            .slider-actions__item
+              span.slider-actions__new новинка
+              img.slider-actions__product-picture(src='img/product_picture.jpg', alt='product')
+              h3.slider-actions__product-name MP46FDA
+              p.slider-actions__product-description
+                | Краткоре описание техники... Краткоре описание техники... Краткоре описание техники...
+              a.product-link(href="prod-card.html")
+            .slider-actions__item
+              span.slider-actions__new новинка
+              img.slider-actions__product-picture(src='img/product_picture.jpg', alt='product')
+              h3.slider-actions__product-name MP46FDA
+              p.slider-actions__product-description
+                | Краткоре описание техники... Краткоре описание техники... Краткоре описание техники...
+              a.product-link(href="prod-card.html")
+            .slider-actions__item
+              span.slider-actions__new новинка
+              img.slider-actions__product-picture(src='img/product_picture.jpg', alt='product')
+              h3.slider-actions__product-name MP46FDA
+              p.slider-actions__product-description
+                | Краткоре описание техники... Краткоре описание техники... Краткоре описание техники...
+              a.product-link(href="prod-card.html")
+            .slider-actions__item
+              span.slider-actions__new новинка
+              img.slider-actions__product-picture(src='img/product_picture.jpg', alt='product')
+              h3.slider-actions__product-name MP46FDA
+              p.slider-actions__product-description
+                | Краткоре описание техники... Краткоре описание техники... Краткоре описание техники...
+              a.product-link(href="prod-card.html")
+            .slider-actions__item
+              span.slider-actions__new новинка
+              img.slider-actions__product-picture(src='img/product_picture.jpg', alt='product')
+              h3.slider-actions__product-name MP46FDA
+              p.slider-actions__product-description
+                | Краткоре описание техники... Краткоре описание техники... Краткоре описание техники...
+              a.product-link(href="prod-card.html")
+            .slider-actions__item
+              span.slider-actions__new новинка
+              img.slider-actions__product-picture(src='img/product_picture.jpg', alt='product')
+              h3.slider-actions__product-name MP46FDA
+              p.slider-actions__product-description
+                | Краткоре описание техники... Краткоре описание техники... Краткоре описание техники...
+              a.product-link(href="prod-card.html")
+            .slider-actions__item
+              span.slider-actions__new новинка
+              img.slider-actions__product-picture(src='img/product_picture.jpg', alt='product')
+              h3.slider-actions__product-name MP46FDA
+              p.slider-actions__product-description
+                | Краткоре описание техники... Краткоре описание техники... Краткоре описание техники...
+            .slider-actions__item
+              span.slider-actions__new новинка
+              img.slider-actions__product-picture(src='img/product_picture.jpg', alt='product')
+              h3.slider-actions__product-name MP46FDA
+              p.slider-actions__product-description
+                | Краткоре описание техники... Краткоре описание техники... Краткоре описание техники...
+              a.product-link(href="prod-card.html")
+        .left-handler
+        .right-handler
+        hr.content-line
+    // slider
+    .advantages
+      .wrapper
+        h1.advantages__tittle Преимущества
+        .advantages__left-bar
+          .advantages__bar-inner
+            header.inner-tittle Гарантия качества
+            p.inner-body
+              | Новый ручной блендер для хозяек, знающих цену каждой минуте. Его не только приятно держать в руках, несложно мыть и жалко убирать на место.
+          .advantages__bar-inner
+            header.inner-tittle Доставка по всей Беларусии
+            p.inner-body
+              | Новый ручной блендер для хозяек, знающих цену каждой минуте. Его не только приятно держать в руках, несложно мыть и жалко убирать на место.
+          .advantages__bar-inner
+            header.inner-tittle Надёжный сервис
+            p.inner-body
+              | Новый ручной блендер для хозяек, знающих цену каждой минуте. Его не только приятно держать в руках, несложно мыть и жалко убирать на место.
+        .advantages__right-bar
+          .advantages__bar-inner
+            header.inner-tittle Честные цены
+            p.inner-body
+              | Новый ручной блендер для хозяек, знающих цену каждой минуте. Его не только приятно держать в руках, несложно мыть и жалко убирать на место.
+          .advantages__bar-inner
+            header.inner-tittle Кредит «не выходя из дома»
+            p.inner-body
+              | Новый ручной блендер для хозяек, знающих цену каждой минуте. Его не только приятно держать в руках, несложно мыть и жалко убирать на место.
+          .advantages__bar-inner
+            header.inner-tittle Выгодные покупки
+            p.inner-body
+              | Новый ручной блендер для хозяек, знающих цену каждой минуте. Его не только приятно держать в руках, несложно мыть и жалко убирать на место.
+    // advantages
+    footer.footer
+      .nav__red-line
+      .wrapper
+        ul.footer-menu
+          each item in links
+            if item.data === selected
+              li(class="footer-item footer-item--active")
+                a(href="#" class="footer-link footer-link--active")= item.name
+            else
+              li.footer-item
+                a(href=item.url class="footer-link")= item.name
+        .header__second-line
+          img.analitics(src='img/analitics.jpg', alt='analitics')
+          p.schedule.schedule--footer
+            | Время работы Пн - ПТ
+            br
+            | 				с 8-00 до 20-00
+          p.days.days--footer
+            | В выходные дни
+            br
+            | 				с  9-00 до 17-00
+          p.telephones.telephones--footer
+            | 8 (495) 510 27 27
+            br
+            | 				8 (800) 100 05 56

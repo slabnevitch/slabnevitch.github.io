@@ -1,0 +1,13 @@
+extends template
+
+append sharedVars
+	- var selected = 'help';
+block breadcrumbs-link
+	li.breadcrumbs-item
+		span.breadcrumbs-link Поддержка
+
+block current-section-name
+	span.current-section-name Поддержка
+ 
+block center-content
+	include jade/includes/_help-content
