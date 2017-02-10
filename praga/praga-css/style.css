@@ -1,0 +1,993 @@
+*::-webkit-input-placeholder {
+	color:fff;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+:invalid {
+  box-shadow: none;
+}
+}
+.html, body{
+	width: 100%;
+	height: 100;
+}
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+	-outline: 3px solid red;
+	-overflow: hidden;
+}
+/*------------------------------------------HEADER--------------------------------------*/
+.header{
+	width: 100%;
+	height: 126px;
+	-margin-top: -126px;
+	-position: fixed;
+	background-color: #fff;
+	
+}
+.pseudo-header{
+	width: 100%;
+	position: fixed;
+	background-color: #fff;
+	z-index: 100;
+}
+.header__blueline{
+	height: 45px;
+	background-color: #3dbce2;
+}
+.header__navigation{
+	margin-top: -45px;
+	float: right;
+}
+.clearfix{
+	clear: both;
+}
+.header__menu{
+	font-size: 0;
+	line-height: 0;
+	background-color: #3dbce2;
+}
+.header__item{
+	display: inline-block;
+	-padding: 0 19px 0 19px;
+	position: relative;
+}
+.header__item:hover{
+	background-color: #37a9cb;
+	
+}
+.header__item--hover{
+	background-color: #37a9cb;
+}
+.header__item:after{
+	content: '';
+	width: 1px;
+	height: 25px;
+	background-color: #5fcae8;
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+
+.header__item:last-child:after{
+	display: none;
+}
+
+.header__link{
+	display: block;
+	width: 100%;
+	padding: 0 19px 0 19px;
+	font: 14px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #fff;
+	line-height: 44px;
+	text-decoration: none;
+}
+.header__regform{
+	width: 197px;
+	height: 46px;
+	float: right;
+	margin-left: 23px;
+	margin-top: 18px;
+	background-color: #fe396b;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: none;
+	cursor: pointer;
+	font: 14px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.header__phone, .header__portfolio{
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 0 36px 0 36px; 
+	position: relative;
+}
+.header__portfolio:after{
+	content: '';
+	width: 1px;
+	height: 61px;
+	background-color: #f6f6f6;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.header__phone-tittle, .header__portfolio-tittle{
+	margin-bottom: 3px;
+	font: 22px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #2f2f2f;
+	text-transform: uppercase;
+}
+.header__phone-link, .header__portfolio-link{
+	font: 14px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #ef404a;
+	text-decoration: none;
+	border-bottom: 1px dashed #ef404a;
+	position: relative;
+}
+.header__phone-link{
+	margin-left: 42px;
+}
+.header__phone-link:before{
+	content: '';
+	width: 17px;
+	height: 17px;
+	background:  url(../praga-img/ico_head.png) -23px 0 no-repeat;
+	position: absolute;
+	left: -40px;
+}
+.header__phone-link:after{
+	content: '';
+	width: 18px;
+	height: 5px;
+	background:  url(../praga-img/ico_head.png) -40px 0 no-repeat;
+	position: absolute;
+	left: -21px;
+	top: 5px;
+}
+.header__portfolio-link{
+	margin-left: 48px;
+}
+.header__portfolio-link:before{
+	content: '';
+	width: 23px;
+	height: 17px;
+	background:  url(../praga-img/ico_head.png) 0 0 no-repeat;
+	position: absolute;
+	left: -50px;
+}
+.header__portfolio-link:after{
+	content: '';
+	width: 18px;
+	height: 5px;
+	background:  url(../praga-img/ico_head.png) -40px 0 no-repeat;
+	position: absolute;
+	left: -25px;
+	top: 5px;
+}
+.header__logo{
+	width: 154px;
+	height: 154px;
+	background: #fff url() center 20% no-repeat;
+	position: absolute;
+	top: 0;
+	border: 3px solid #3dbce2;
+	border-top: none;
+	border-bottom: none;
+	text-align: center;
+	cursor: pointer;
+}
+.header__logo img{
+display: inline-block;
+margin-top: 10px;
+}
+.header__logo:after{
+	content: '';
+	width: 160px;
+	height: 18px;
+	position: absolute;
+	left: -3px;
+	bottom: -18px;
+	background-image: url(../praga-img/head_logo_triangle.png);
+}
+.header__logo-title{
+	margin-top: 10px;
+	font: 18px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 500;
+	color: #3dbce2;
+	text-transform: uppercase;
+	text-align: center;
+}
+.header__logo-description{
+	font: 13px/14px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #303030;
+	text-align: center;
+}
+.header__regform:hover, .consult:hover, .consult--hidden:hover{
+	background-color: #ce1d4f;
+}
+.header__regform:active, .consult:active, .consult--hidden:active{
+	background-color: #ff74a6;
+}
+
+/*------------------------------------------END OF HEADER--------------------------------------*/
+/*------------------------------------------SLIDER--------------------------------------*/
+.slider{
+	width: 100%;
+	min-width: 1000px;
+	height: 769px;
+	margin: 0 auto;
+	
+	-margin-top: 126px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-padding-top: 154px;
+	background: #fff url() center top no-repeat;
+	position: relative;
+	overflow: hidden;
+}
+.wrapper--slider{
+	position: absolute;
+	height: 770px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	-outline: 2px solid red;
+}
+
+.item{
+	height: 770px;
+	width: 100%;
+	background-position: center top; 
+	opacity: 0;
+}
+
+.slider__left-arrow, .slider__right-arrow{
+	width: 22px;
+	height: 86px;
+	position: absolute;
+	top: 285px;
+	cursor: pointer;
+	-display: none;
+}
+.slider__left-arrow{
+	background-image: url(../praga-img/left_arrow.png);
+	left: -69px;
+}
+.slider__right-arrow{
+	background-image: url(../praga-img/right_arrow.png);
+	right: -69px;
+}
+.slider__tittle{
+	margin-top: 157px;
+	font: 60px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #fff;
+	font-weight: 800;
+	text-transform: uppercase;
+	text-align: center;
+}
+.slider__text{
+	margin: 0 35px 62px 35px;
+	font: 24px/27px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #fff;
+	text-align: center;
+}
+.slider__formtittle{
+	width: 694px;
+	margin: 0 auto;
+	font: 17px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #fff;
+	text-align: center;
+	line-height: 47px;
+	text-transform: uppercase;
+	background-color: #3dbce2;
+}
+.form-container{
+	position: relative;
+}
+.reg-form{
+	width: 802px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	margin-top: -24px;
+	padding: 48px 28px 0 34px;
+	text-align: justify;
+	background: url(../praga-img/form_lines.png) 0 0 no-repeat;
+}
+.reg-form:after{
+	content: '';
+	width: 100%;
+	height: 0px;
+	visibility: hidden;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.reg-form__name, .reg-form__phone, .reg-form__mail{
+	width: 237px;
+	height: 45px;
+	margin-bottom: 21px;
+	display: inline-block;
+	padding: 0 15px 0 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: 45px;
+	border: 2px solid #f3f2f1;
+	font: 13px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #fff;
+	font-weight: 600;
+	background-color: transparent;
+}
+.reg-form__name:focus, .reg-form__phone:focus, .reg-form__mail:focus{
+	background-color: rgba(255, 255, 255, .8);
+	color: #303030;
+}
+.reg-form__submit-container{
+	width: 244px;
+	height: 63px;
+	display: inline-block;
+	margin-left: 245px;
+	background-color: rgba(0, 0, 0, .13);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.reg-form__submit{
+	width: 238px;
+	height: 57px;
+	margin: 3px 0 0 3px;
+	background-color: #fe396b;
+	font: 15px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+	border: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #ce5270;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.slider__switcher{
+	width: 100%;
+	margin-top: 56px;
+	text-align: center;
+}
+.slider__button-item{
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-right: 9px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	position: relative;
+	cursor: pointer;
+}
+.slider__insider{
+	display: none;
+	width: 11px;
+	height: 11px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color: #fff;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+.slider__insider--active{
+	display: block;
+}
+/*------------------------------------------END OF SLIDER--------------------------------------*/
+/*------------------------------------------ADVANTAGES--------------------------------------*/
+.section-header{
+	margin-top: 22px;
+	font: 48px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 400;
+	color: #303030;
+	text-align: center;
+	text-transform: uppercase;
+}
+.advantages__text{
+	margin-top: 20px;
+	margin-bottom: 38px;
+	font: 17px/25px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #303030;
+	font-weight: 300;
+	text-align: center;
+}
+.advantages__icons{
+	width: 100%;	
+	text-align: justify;
+}
+.advantages__icons:after{
+	content: '';
+	width: 100%;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+	display: inline-block;
+}
+.icon-block{
+	width: 220px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+.icon-block__image{
+	width: 117px;
+	height: 117px;
+	display: inline-block;
+	background: #adebf6 url(../praga-img/ico_adv_sprite.png) 0 0 no-repeat;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+}
+.icon-block__image--chair{
+	background-position: -120px 0;
+}
+.icon-block__image--clock{
+	background-position: 0 -120px;
+}
+.icon-block__image--coin{
+	background-position: -120px -120px;
+}
+.icon-block__image--spa{
+	background-position: -240px 0;
+}
+.icon-block__image--regard{
+	background-position: -240px -120px;
+}
+.icon-block__image--phone{
+	background-position: 0 -243px;
+}
+.advantages__icons--align-center{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 142px 0 142px;
+	margin-top: 18px;
+}
+.icon-block__description{
+	font: 15px/18px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 300;
+	color: #303030;
+}
+/*------------------------------------------END OF ADVANTAGES--------------------------------------*/
+/*------------------------------------------eyelashes--------------------------------------*/
+.eyelashes{
+	width: 100%;
+	min-width: 1000px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;		
+	height: 700px;
+	padding-top: 123px;
+	background: url(../praga-img/bg_eyelashes_section.jpg) center top no-repeat;
+	
+}
+.section-header--inv{
+	font: 48px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+}
+.section-visual{
+	width: 370px;
+	height: 370px;
+	float: left;
+	margin-left: 42px;
+	margin-top: 30px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;
+	background: #fff url(../praga-img/bg_eye_vis.png) 50% 50% no-repeat;
+	position: relative;
+}
+.client-count{
+	width: 115px;
+	height: 115px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	text-align: center;
+	
+	border: 6px solid #fff;
+	background-color: #01acd8;
+	position: absolute;
+	bottom: 19px;
+	right: -23px;
+}
+.client-number{
+	margin-top: 18px;
+	margin-bottom: -5px;
+	font: 40px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+.clients{
+	font: 12px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+}
+.section-text{
+	width: 520px;
+	margin-top: 88px;
+	float: right;
+	font: 16px/24px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 400;
+	text-align: justify;
+	color: #fff;
+}
+.consult-container, .consult-container-inv{
+	width: 266px;
+	height: 63px;
+	float: right;
+	margin-right: 256px;
+	margin-top: 46px;
+	-display: inline-block;
+	-margin-left: 245px;
+	background-color: rgba(0, 0, 0, .13);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.consult-container-inv{
+	float: left;
+}
+.consult, .consult--hidden{
+	width: 260px;
+	height: 57px;
+	margin: 3px 0 0 3px;
+	background-color: #fe396b;
+	font: 15px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+	border: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #ce5270;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+/*------------------------------------------END OF eyelashes--------------------------------------*/
+/*------------------------------------------MANICURE--------------------------------------*/
+.manicure{
+	width: 100%;
+	min-width: 1000px;
+	padding-bottom: 64px;
+  -overflow: hidden;
+}
+.section-text-inv{
+	width: 520px;
+	margin-top: 88px;
+	float: left;
+	font: 16px/24px 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-weight: 400;
+	text-align: justify;
+	color: #303030;
+}
+.section-visual-inv{
+	width: 370px;
+	height: 370px;
+	float: right;
+	margin-right: 45px;
+	margin-top: 54px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;
+	background: #efefef url(../praga-img/bg_manicure_vis.png) 50% 50% no-repeat;
+	position: relative;
+}
+.{
+	width: 266px;
+	height: 63px;
+	float: left;
+	margin-top: 46px;
+	mb64
+	-display: inline-block;
+	-margin-left: 245px;
+	background-color: rgba(0, 0, 0, .13);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+/*------------------------------------------END OF MANICURE--------------------------------------*/
+/*------------------------------------------PEDICURE--------------------------------------*/
+.pedicure{
+	width: 100%;
+	min-width: 1000px;
+	height: 700px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 123px;
+	background: url(../praga-img/bg_pedicure_section.jpg) center top 0 no-repeat;
+}
+.section-visual--pedicure{
+	width: 370px;
+	height: 370px;
+	float: left;
+	margin-left: 42px;
+	margin-top: 30px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;
+	background: #fff url(../praga-img/bg_pedicure_vis.png) 50% 50% no-repeat;
+	position: relative;
+}
+/*------------------------------------------END OF PEDICURE--------------------------------------*/
+/*------------------------------------------orthonyxia--------------------------------------*/
+.orthonyxia{
+	width: 100%;
+	min-width: 1000px;
+	padding-bottom: 64px;
+}
+.section-visual-inv--orthonyxia{
+	background: #fff url(../praga-img/bg_orthonyxia_vis.png) 50% 50% no-repeat;
+}
+/*------------------------------------------END OF orthonyxia--------------------------------------*/
+/*------------------------------------------WAXING--------------------------------------*/
+.waxing{
+	width: 100%;
+	height: 700px;
+	padding-top: 106px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: red url(../praga-img/bg_waxing_section.jpg) center top 0 no-repeat;
+}
+.section-text--waxing{
+	margin-top: 48px;
+}
+.section-visual--waxing{
+	background: #fff url(../praga-img/bg_waxing_vis.png) 50% 50% no-repeat;
+}
+/*------------------------------------------END OF WAXING--------------------------------------*/
+/*------------------------------------------ABOUT--------------------------------------*/
+.about{
+	width: 100%;
+	min-width: 1000px;
+	height: 922px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   padding-bottom: 38px;
+   font-family: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+   color: #303030;
+   text-align: center;
+}
+.about__tittle{
+	margin-bottom: 20px;
+	font-size: 48px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.about__body{
+	margin-bottom: 5px;
+	font-size: 17px;
+	line-height: 25px;
+	font-weight: 300;
+}
+.about__subtittle{
+   margin-top: 39px;
+   margin-bottom: 9px;
+    font-size: 24px;
+	text-transform: uppercase;
+}
+.about__video-tittle{
+	font-size: 17px;
+	font-weight: 600;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.about__video{
+  margin-bottom: 38px;
+}
+/*------------------------------------------END OF ABOUT--------------------------------------*/
+/*------------------------------------------MAGAZINES--------------------------------------*/
+.magazins{
+	width: 100%;
+	min-width: 1000px;
+	height: 652px;
+	padding-top: 230px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	background: url(../praga-img/bg_magazins_section.png) center top no-repeat;
+}
+.wrapper--magazins{
+	text-align: justify;
+	font-size: 0;
+}
+.wrapper--magazins:after{
+	content: '';
+	width: 100%;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+	display: inline-block;
+}
+.magazins__unit{
+	width: 218px;
+	height: 281px;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	border: 5px solid #cdf9ff;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.magazins__unit:hover .magazins__paranja{
+	display: block;
+}
+.magazins__paranja{
+	width: 213px;
+	height: 276px;
+	padding-top: 103px;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.79);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.event{
+	display: inline-block;
+	margin-bottom: 5px;
+	color: #f6255a;
+	font: 16px 'Open-Sans', "Trebuchet MS", "Helvetica CY", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.event-name{
+	color: #fff;
+	font: 14px 'Open-Sans', "Trebuchet MS", "Helvetica CY", sans-serif;
+	font-weight: 300;
+}
+.event-link{
+		margin-top: 10px;
+	display: block;
+	color: #f6255a;
+	font: 14px 'Open-Sans', "Trebuchet MS", "Helvetica CY", sans-serif;
+	font-weight: 300;
+}
+/*------------------------------------------END OF MAGAZINES--------------------------------------*/
+/*------------------------------------------CONTACTS--------------------------------------*/
+.contacts{
+	width: 100%;
+	min-width: 1000px;
+	height: 755px;
+	margin-top: -110px;
+	position: relative;
+	background: url(../praga-img/bg_contacts_section.jpg) center top no-repeat;
+	z-index:0;
+
+}
+.contacts__shadow{
+	position: absolute;
+	left: 410px;
+	top: 352px;
+}
+.contacts__marker{
+	width: 398px;
+	-height: 160px;
+	padding: 0 70px 0 70px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #fff;
+	position: absolute;
+	left: 430px;
+	top: 330px;
+	
+	border: 5px solid #cdf9ff;
+	text-align: center;
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: #303030;
+}
+.contacts__marker:after{
+	content: '';
+	width: 66px;
+	height: 33px;
+	position: absolute;
+	background-image: url(../praga-img/contacts_triangle.png);
+	bottom: -33px;
+	left: 161px;
+}
+.contacts__header{
+	display: inline-block;
+	margin-top: 13px;
+	font-size: 24px;
+	font-weight: 600;
+	color: #fc3366;
+}
+.contacts__adress{
+	padding-top: 10px;
+	line-height: 19px;
+	font-size: 15px;
+	font-weight: 300;
+	
+}
+.contacts__phone{
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 600;
+	margin-top: 6px;
+	margin-bottom: 18px;
+}
+/*------------------------------------------END OF CONTACTS--------------------------------------*/
+/*------------------------------------------FOOTER--------------------------------------*/
+.footer{
+	width: 100%;
+	min-width: 1000px;
+	height: 93px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 40px;
+	background-color: #303030;
+	position: relative;
+}
+.footer__copyright{
+	font: 15px 'Open Sans', Arial,sans-serif;
+	font-weight: 300;
+	color: #fff;
+	text-align: center;
+}
+.footer__beauty{
+	color: #f6255a;
+}
+/*------------------------------------------END OF FOOTER--------------------------------------*/
+/*------------------------------------------CONSULTING--------------------------------------*/
+.consulting, .booking{
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0, 0, 0, .8);
+	position: fixed;
+	top: 0;
+	z-index: 101;
+}
+.consulting__form, .booking__form{
+	max-width: 420px;
+	position: absolute;
+	padding: 40px 20px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.input-title{
+display: block;
+padding-bottom: 5px;
+text-align: left;
+}
+.consulting__form{
+	height: 230px;
+}
+.booking__form{
+	height: 400px;
+}
+.consult-container--paranja{
+	float: none;
+	margin: 0 auto;
+}
+.consulting__input_name, .consulting__input_phone, .booking__input_date, .booking__input_phone, .booking__input_select{
+	width: 100%;
+	height: 45px;
+	margin-bottom: 21px;
+	display: inline-block;
+	padding: 0 15px 0 15px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: 45px;
+	border: 2px solid #f3f2f1;
+	font: 13px 'Open Sans', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	color: #fff;
+	font-weight: 600;
+	background-color: gray;
+}
+.consulting__input_name:focus, .consulting__input_phone:focus{
+	background-color: rgba(255, 255, 255, .8);
+	color: #303030;
+}
+.consulting__close{
+width: 30px;
+height: 30px;
+position: absolute;
+right: 0;
+margin-right: 10px;
+margin-top: -50px;
+font: 15px 'Open Sans', Arial,sans-serif;
+cursor: pointer;
+background-color: #fff;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+border: 1px solid gray;
+}
+.consulting__close:hover .consulting__symbol{
+font-weight: bold;
+color: red;
+}
+
+.consulting__symbol{
+	line-height: 28px;
+color: gray;
+font-size: 30px;
+}
+
+/*------------------------------------------END OF CONSULTING--------------------------------------*/
+/*------------------------------------------BOOKING--------------------------------------*/
+
+.booking__input_name:focus, .booking__input_phone:focus{
+	background-color: rgba(255, 255, 255, .8);
+	color: #303030;
+}
+.booking__close{
+position: absolute;
+right: 0;
+margin-right: 50px;
+margin-top: 50px;
+color: #fff;
+font: 15px 'Open Sans', Arial,sans-serif;
+cursor: pointer;
+}
+
+.booking__option{
+padding: 5px 0 5px 10px;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	   .consulting__form, .booking__form{
+		max-width: 420px;
+		position: absolute;
+		padding: 40px 20px;
+		
+		}
+		.consulting__form{
+		top: 50%;
+		left: 50%;
+		margin-top: -100px;
+		margin-left: -210px;
+		}
+
+	.booking__form{
+		top: 50%;
+		left: 50%;
+		margin-top: -200px;
+		margin-left: -210px;
+	}
+}
