@@ -21,12 +21,14 @@ html.js .loader {
     left: 50%;
     top: 50%;
     position: absolute; }
-
+html {
+   min-width: 1204px;
+  }
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 14px;
-  max-width:1204px;
+  min-width:1204px;
   position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
