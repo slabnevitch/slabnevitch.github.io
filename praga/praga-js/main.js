@@ -53,7 +53,7 @@ $(document).ready(function(){
 	$('.section-header, .about__tittle').animated('slideInUp', 'fadeOut');
 	$('.client-count').animated('zoomIn', 'fadeOut');
 	
-	$(window).on('load', function(){
+	$(window).load(function(){
 		$('.preloader').fadeOut(500);
 	});
 });
