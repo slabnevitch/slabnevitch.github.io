@@ -31,6 +31,75 @@
 iframe{
 	border: none;
 }
+@keyframes clockwise {
+  to {transform: rotate(360deg) translatez(0);}
+}
+
+@keyframes counter-clockwise {
+  to {transform: rotate(-360deg) translatez(0);}
+}
+.preloader{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: red;
+}
+.multi {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  
+  height: 50px;
+  width:  50px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent hsla(0, 0%, 100%, 0.25) transparent hsla(0, 0%, 100%, 0.50);
+  border-radius: 100%;
+  animation: clockwise 1.01s linear infinite;
+}
+
+.multi:after {
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 5px;
+  height: 30px;
+  width:  30px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsla(0, 0%, 100%, 0.50) transparent transparent;
+  border-radius: 100%;
+}
+
+.multi div {
+  position: relative;
+  height: 40px;
+  width:  40px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsla(0, 0%, 100%, 0.25) transparent hsla(0, 0%, 100%, 0.5);
+  border-radius: 100%;
+  animation: counter-clockwise 0.49s linear infinite;
+}
+
+.multi div:after {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 30px;
+  width:  30px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent hsla(0, 0%, 100%, 0.25) ;
+  border-radius: 100%;
+}
 /*------------------------------------------HEADER--------------------------------------*/
 .header{
 	width: 100%;
