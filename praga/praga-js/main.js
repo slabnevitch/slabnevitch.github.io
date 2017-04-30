@@ -52,4 +52,8 @@ $(document).ready(function(){
 	$('.slider__tittle').animated('pulse', 'fadeOut');
 	$('.section-header, .about__tittle').animated('slideInUp', 'fadeOut');
 	$('.client-count').animated('zoomIn', 'fadeOut');
+	
+	$(window).load(function(){
+		$('.preloader').fadeOut(500);
+	});
 });
