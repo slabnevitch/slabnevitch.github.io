@@ -46,7 +46,7 @@ iframe{
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: red;
+  background-color: #FE396B;
   z-index: 999;
 }
 .multi {
